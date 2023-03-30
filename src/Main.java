@@ -12,4 +12,7 @@ public class Main {
             return Math.min(min, arr[n-1]);
         }
     }
+    public static double findAvr(int[] arr, int n){
+
+    }
 }
