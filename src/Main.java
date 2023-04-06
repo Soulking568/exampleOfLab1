@@ -23,6 +23,11 @@ public class Main {
         //Problem 5
         System.out.println("Find Fibonacci number " + fibonacci(n));
 
+        //Problem 6
+
+        int a= sc.nextInt();
+        int nPower = sc.nextInt();
+        System.out.println("Power" + power(a,nPower));
 
     }
     public static int findMin(int[] arr, int n) {
@@ -78,6 +83,14 @@ public class Main {
             return 1;
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    public static int power(int a, int n) {
+
+        if (n == 0) {
+            return 1;
+        }
+        return a * power(a, n - 1);
     }
 
 
