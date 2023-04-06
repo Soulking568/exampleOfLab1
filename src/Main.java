@@ -16,6 +16,10 @@ public class Main {
         //Problem 3
         int n = sc.nextInt();
         System.out.println("Prime? " + isPrime(n));
+
+        //Problem 4
+
+
     }
     public static int findMin(int[] arr, int n) {
         if (n == 1) {
