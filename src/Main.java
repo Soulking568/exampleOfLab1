@@ -5,30 +5,36 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] arr = {5, 2, 9, 1, 7};
-        // Problem 1
+        //TODO Problem 1
         int min = findMin(arr, arr.length);
         System.out.println("Minimum element in the array is: " + min);
 
-        //Problem 2
+        //TODO Problem 2
         double avg = findAvg(arr, arr.length);
         System.out.println("Avarage:" + avg);
 
-        //Problem 3
+        //TODO Problem 3
         int n = sc.nextInt();
         System.out.println("Prime? " + isPrime(n));
 
-        //Problem 4
+        //TODO Problem 4
         System.out.println("Factorial " + factorial(n));
 
-        //Problem 5
+        //TODO Problem 5
         System.out.println("Find Fibonacci number " + fibonacci(n));
 
-        //Problem 6
-
+        //TODO Problem 6
         int a= sc.nextInt();
         int nPower = sc.nextInt();
         System.out.println("Power" + power(a,nPower));
 
+        /*//TODO Problem 7
+        int[] array = {4,5,6,7,9,4,2};
+        System.out.println(reverse(array););*/
+
+        //TODO Problem 8
+        String s = sc.next();
+        System.out.println("String countains only digit? " + isAllDigits(s));
     }
     public static int findMin(int[] arr, int n) {
         if (n == 1) {
@@ -93,7 +99,28 @@ public class Main {
         return a * power(a, n - 1);
     }
 
+    /*public static void reverse(int[] arr, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        reverse(arr, start+1, end-1);
+    }
+    public static void reverseArray(int[] arr) {
+        reverse(arr, 0, arr.length-1);
+    }*/
 
+    public static String isAllDigits(String s) {
 
+        if (s.length() == 0) {
+            return "Yes";
+        }
+        if (Character.isDigit(s.charAt(0))) {
+            return isAllDigits(s.substring(1));
+        }
+        return "No";
+    }
 
 }
