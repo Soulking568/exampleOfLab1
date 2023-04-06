@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Prime? " + isPrime(n));
 
         //Problem 4
-
+        System.out.println("Factorial " + factorial(n));
 
     }
     public static int findMin(int[] arr, int n) {
@@ -59,6 +59,13 @@ public class Main {
     public static boolean isPrime(int n) {
         return isPrime(n, 2);
     }
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
 
 
 
