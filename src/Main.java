@@ -26,7 +26,7 @@ public class Main {
 
         double sum = findAvg(arr, n - 1) * (n - 1);
         sum += arr[n - 1];
-        return sum / n;
+        return  sum / n;
     }
 
 }
