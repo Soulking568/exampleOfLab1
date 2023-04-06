@@ -3,9 +3,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int[] arr = {5, 2, 9, 1, 7};
+        // Problem 1
         int min = findMin(arr, arr.length);
         System.out.println("Minimum element in the array is: " + min);
+
+        //Problem 2
+        double avg = findAvg(arr, arr.length);
+        System.out.println("Avarage:" + avg);
+
+        //Problem 3
+        int n = sc.nextInt();
+        System.out.println("Prime? " + isPrime(n));
     }
     public static int findMin(int[] arr, int n) {
         if (n == 1) {
@@ -28,5 +38,24 @@ public class Main {
         sum += arr[n - 1];
         return  sum / n;
     }
+    public static boolean isPrime(int n, int i) {
+        if (n <= 2) {
+            return (n == 2) ? true : false;
+        }
+        if (n % i == 0) {
+            return false;
+        }
+
+        if (i * i > n) {
+            return true;
+        }
+        return isPrime(n, i + 1);
+    }
+
+    public static boolean isPrime(int n) {
+        return isPrime(n, 2);
+    }
+
+
 
 }
