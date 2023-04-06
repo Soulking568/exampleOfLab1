@@ -20,6 +20,10 @@ public class Main {
         //Problem 4
         System.out.println("Factorial " + factorial(n));
 
+        //Problem 5
+        System.out.println("Find Fibonacci number " + fibonacci(n));
+
+
     }
     public static int findMin(int[] arr, int n) {
         if (n == 1) {
@@ -64,6 +68,16 @@ public class Main {
             return 1;
         }
         return n * factorial(n - 1);
+    }
+
+    public static int fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
 
