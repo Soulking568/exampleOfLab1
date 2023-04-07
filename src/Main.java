@@ -26,7 +26,7 @@ public class Main {
         //TODO Problem 6
         int a= sc.nextInt();
         int nPower = sc.nextInt();
-        System.out.println("Power" + power(a,nPower));
+        System.out.println("Power " + power(a,nPower));
 
         /*//TODO Problem 7
         int[] array = {4,5,6,7,9,4,2};
@@ -35,6 +35,12 @@ public class Main {
         //TODO Problem 8
         String s = sc.next();
         System.out.println("String countains only digit? " + isAllDigits(s));
+
+        //TODO Problem 9
+        int N = sc.nextInt();
+        int k = sc.nextInt();
+
+        System.out.println("Binomial cofficient " + binomialCoefficient(N,k));
     }
     public static int findMin(int[] arr, int n) {
         if (n == 1) {
@@ -122,5 +128,17 @@ public class Main {
         }
         return "No";
     }
+
+    public static int binomialCoefficient(int n, int k) {
+        if (k == 0 || k == n) {
+            return 1;
+        } else {
+            return binomialCoefficient(n-1, k-1) * n / k;
+        }
+    }
+
+
+
+
 
 }
