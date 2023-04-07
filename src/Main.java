@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Find Fibonacci number " + fibonacci(n));
 
         //TODO Problem 6
-        int a= sc.nextInt();
+        int a =  sc.nextInt();
         int nPower = sc.nextInt();
         System.out.println("Power " + power(a,nPower));
 
@@ -37,10 +37,17 @@ public class Main {
         System.out.println("String countains only digit? " + isAllDigits(s));
 
         //TODO Problem 9
+        System.out.println("Problem 9: " + "Binomial cofficient\n");
         int N = sc.nextInt();
         int k = sc.nextInt();
 
-        System.out.println("Binomial cofficient " + binomialCoefficient(N,k));
+        System.out.println("Answer " + binomialCoefficient(N,k));
+
+        //TODO Problem 10
+        int A = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("GCD: " + gcd(A,b));
+
     }
     public static int findMin(int[] arr, int n) {
         if (n == 1) {
@@ -137,8 +144,12 @@ public class Main {
         }
     }
 
-
-
-
+    public static int gcd(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return gcd(b, a % b);
+        }
+    }
 
 }
