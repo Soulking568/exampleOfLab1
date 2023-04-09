@@ -8,8 +8,8 @@ public class Task4 {
     }
     /**
      * This method leads the factorial of the entered number
-     * @param n - the number of which it is necessary to find the factorial
-     * @return factorial of a number
+     * @param n - entered number
+     * @return factorial number
      */
     public static int factorial(int n) {
         if (n == 0 || n == 1) {
